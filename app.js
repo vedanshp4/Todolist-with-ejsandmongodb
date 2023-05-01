@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 const _ = require('lodash');
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://adminvedansh:Vedansh%401@cluster0.j7vzx4w.mongodb.net/todoDB");
+mongoose.connect(process.env.MONGODB_URL);
 
 const app = express();
 
